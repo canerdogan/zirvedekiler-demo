@@ -10,4 +10,12 @@ body:has(.phone){background:#e6ecee}
 .zt-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#123e46;color:white;padding:12px 18px;border-radius:9px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:60}
 .zt-toast.on{opacity:1}
 .zt-log small{display:block}
-@media (max-width:900px){.layout{flex-direction:column}.side{width:auto;padding:16px}.brand span{margin:4px 0 12px}.cards{grid-template-columns:1fr 1fr}.grid,.grid.equal{grid-template-columns:1fr}main{padding:0 16px 20px}table{display:block;overflow-x:auto}}
+.zt-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.zt-head h2{margin:0}
+.zt-servis-tablo td small{display:block}
+.zt-sum td{background:#f4f7f8}
+.zt-box select.input{width:100%;display:block}
+@media (max-width:900px){.top{height:auto;min-height:64px;padding:10px 0;flex-wrap:wrap;gap:6px 12px}.top>span:last-child{display:flex;align-items:center;white-space:nowrap}.avatar{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;flex:none}
+.zt-servis-tablo,.zt-servis-tablo tbody{display:block}.zt-servis-tablo thead{display:none}.zt-servis-tablo tr{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;padding:12px 0;border-bottom:1px solid #edf1f2}.zt-servis-tablo td{border:0;padding:2px 0}.zt-servis-tablo td:empty{display:none}.zt-servis-tablo td::before{content:attr(data-label);display:block;font-size:10px;letter-spacing:.5px;color:#6a8187;margin-bottom:2px}.zt-sum{background:#f4f7f8;padding:12px 10px!important}.zt-sum td{background:none}
+.navs{display:flex;gap:6px;overflow-x:auto;white-space:nowrap;margin:0 -16px;padding:0 16px 4px;-webkit-overflow-scrolling:touch}.navs .nav{flex:none;margin:0;padding:9px 12px}.brand span{margin:4px 0 12px}.sidefoot{padding-top:10px;line-height:1.4;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.sidefoot br{display:none}.zt-reset{margin-top:0}
+.layout{flex-direction:column}.side{width:auto;padding:16px}.brand span{margin:4px 0 12px}.cards{grid-template-columns:1fr 1fr}.grid,.grid.equal{grid-template-columns:1fr}main{padding:0 16px 20px}table{display:block;overflow-x:auto}}
