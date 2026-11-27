@@ -1,15 +1,25 @@
 // Örnek demo verisi. Tümü uydurmadır; tarayıcıda localStorage'a yazılır.
 window.ZT_SEED = {
   firmalar: [
-    {id: "kayalar", ad: "Kayalar Pres Döküm", yer: "Sancaktepe", hat: 12, yetkili: "Elif K."},
-    {id: "marmara", ad: "Marmara Kablo", yer: "Tuzla", hat: 7, yetkili: "Murat A."},
-    {id: "anadolu", ad: "Anadolu Ambalaj", yer: "Dudullu", hat: 5, yetkili: "Seda T."}
+    {id: "kayalar", ad: "Kayalar Pres Döküm", yer: "Sancaktepe", yetkili: "Elif K."},
+    {id: "marmara", ad: "Marmara Ambalaj", yer: "Tuzla", yetkili: "Murat A."},
+    {id: "kuzey", ad: "Kuzey Lojistik", yer: "Hadımköy", yetkili: "Seda T."}
   ],
-  hatlar: [
-    {kod: "K-01", firma: "kayalar", ad: "Kaynarca → Sancaktepe", hareket: "06:15", sonVaris: "06:45"},
-    {kod: "K-04", firma: "kayalar", ad: "Pendik → Sancaktepe", hareket: "06:10", sonVaris: "06:45"},
-    {kod: "K-11", firma: "kayalar", ad: "Kurtköy → Sancaktepe", hareket: "06:20", sonVaris: "06:45"},
-    {kod: "M-02", firma: "marmara", ad: "Kartal → Tuzla", hareket: "07:00", sonVaris: "07:40"}
+  // Bir firmanın birden çok servisi olur: her servis bir güzergâh, bir vardiya ve bir araçtır.
+  // sefer: örnek ayda tek yön sefer sayısı. fabrika / tedarikci: tek yön birim fiyatı (₺).
+  servisler: [
+    {kod: "K-01", firma: "kayalar", guzergah: "Kaynarca → Sancaktepe", vardiya: "08:00 vardiyası", arac: "34 ZT 001", sefer: 44, fabrika: 1466, tedarikci: 1150},
+    {kod: "K-04", firma: "kayalar", guzergah: "Kartal → Sancaktepe", vardiya: "08:00 vardiyası", arac: "34 ZT 004", sefer: 44, fabrika: 1520, tedarikci: 1190},
+    {kod: "K-11", firma: "kayalar", guzergah: "Pendik → Sancaktepe", vardiya: "08:00 vardiyası", arac: "34 ZT 011", sefer: 44, fabrika: 1390, tedarikci: 1090},
+    {kod: "K-15", firma: "kayalar", guzergah: "Ümraniye → Sancaktepe", vardiya: "16:00 vardiyası", arac: "34 ZT 015", sefer: 44, fabrika: 1280, tedarikci: 1000},
+    {kod: "K-22", firma: "kayalar", guzergah: "Kurtköy → Sancaktepe", vardiya: "24:00 vardiyası", arac: "34 ZT 022", sefer: 44, fabrika: 1240, tedarikci: 970},
+    {kod: "M-02", firma: "marmara", guzergah: "Kartal → Tuzla", vardiya: "08:00 vardiyası", arac: "34 ZT 030", sefer: 44, fabrika: 1350, tedarikci: 1060},
+    {kod: "M-05", firma: "marmara", guzergah: "Gebze → Tuzla", vardiya: "08:00 vardiyası", arac: "34 ZT 031", sefer: 44, fabrika: 1410, tedarikci: 1100},
+    {kod: "M-07", firma: "marmara", guzergah: "Pendik → Tuzla", vardiya: "16:00 vardiyası", arac: "34 ZT 032", sefer: 44, fabrika: 1180, tedarikci: 920},
+    {kod: "N-01", firma: "kuzey", guzergah: "Esenyurt → Hadımköy", vardiya: "08:00 vardiyası", arac: "34 ZT 040", sefer: 44, fabrika: 1300, tedarikci: 1020},
+    {kod: "N-03", firma: "kuzey", guzergah: "Beylikdüzü → Hadımköy", vardiya: "08:00 vardiyası", arac: "34 ZT 041", sefer: 44, fabrika: 1450, tedarikci: 1130},
+    {kod: "N-06", firma: "kuzey", guzergah: "Avcılar → Hadımköy", vardiya: "16:00 vardiyası", arac: "34 ZT 042", sefer: 44, fabrika: 1380, tedarikci: 1080},
+    {kod: "N-09", firma: "kuzey", guzergah: "Arnavutköy → Hadımköy", vardiya: "24:00 vardiyası", arac: "34 ZT 043", sefer: 44, fabrika: 1220, tedarikci: 950}
   ],
   suruculer: [
     {ad: "Sürücü 01", tel: "0532 000 00 01", src: "2027-03-14", psikoteknik: "2026-12-20"},
